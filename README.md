@@ -2,7 +2,7 @@
 
 # MotionGen-AI Diffusion Model - Full Implementation Guide
 
-This guide is the result of troubleshooting every dependency failure in the MDM pipeline, specifically for **Local Windows** and **Colab** environments.
+
 
 ## 1. The Mandatory File Setup (Do This First)
 The code will crash unless these files are manually placed in your project root. Do not rely on scripts; verify these exist:
