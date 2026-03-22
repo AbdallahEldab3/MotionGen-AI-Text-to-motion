@@ -88,28 +88,7 @@ plt.show()
 ---
 
 ## 5. Blender Visualization Code
-To see your model's motion in 3D, open Blender's Scripting tab and use this:
-
-```python
-import bpy
-import numpy as np
-
-# Load the generated motion .npy file
-# Path to your generated file
-data = np.load(r"C:\Path\To\Your\Generated_Motion.npy", allow_pickle=True).item()
-motion = data['motion']  # Shape usually [22, 3, Frames]
-
-def build_skeleton(frame_idx):
-    for i in range(motion.shape[0]):
-        x, y, z = motion[i, :, frame_idx]
-        # Create a sphere for each joint
-        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.05, location=(x, y, z))
-        
-# Clear scene and build
-bpy.ops.object.select_all(action='SELECT')
-bpy.ops.object.delete()
-build_skeleton(0)
-```
+To see your model's motion in 3D, open Blender's Scripting tab and paste blender.py content and add path to result npy file.
 ---
 ## Demo
 text prompt : "a person walking forward"
