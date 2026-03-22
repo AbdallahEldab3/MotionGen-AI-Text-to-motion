@@ -1,0 +1,10 @@
+numpy==1.26.4
+torch
+torchvision
+git+https://github.com/openai/CLIP.git
+smplx
+chumpy
+gdown
+pandas
+matplotlib
+tensorboard
