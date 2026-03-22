@@ -112,4 +112,5 @@ build_skeleton(0)
 ```
 ---
 ## Demo
-
+text prompt : "a person walking forward"
+![demo](assets/demo.gif)
