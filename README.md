@@ -94,10 +94,6 @@ To see your model's motion in 3D, open Blender's Scripting tab and paste blender
 text prompt : "a person walking forward"
 ![demo](assets/demo.gif)
 
-To make this a professional research repository, you must properly attribute the original authors. The field of 3D motion synthesis relies heavily on these specific works.
-
-Below is the **Credit & Citations** section to add to the bottom of your `README.md`.
-
 ---
 
 ## Credits & Citations
