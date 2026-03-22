@@ -93,3 +93,36 @@ To see your model's motion in 3D, open Blender's Scripting tab and paste blender
 ## Demo
 text prompt : "a person walking forward"
 ![demo](assets/demo.gif)
+
+To make this a professional research repository, you must properly attribute the original authors. The field of 3D motion synthesis relies heavily on these specific works.
+
+Below is the **Credit & Citations** section to add to the bottom of your `README.md`.
+
+---
+
+## Credits & Citations
+
+This project is built upon the incredible work of the 3D motion research community. If you use this code or the pre-trained models, please cite the following:
+
+### **1. Motion Diffusion Model (MDM)**
+The core architecture and training logic are based on the MDM paper.
+* **Paper:** [Human Motion Diffusion Model](https://arxiv.org/abs/2209.14916)
+* **Authors:** Guy Tevet, Sigal Raab, Brian Chen, Yun Liu, Amit H. Bermano, Daniel Cohen-Or.
+* **Repo:** [GuyTevet/motion-diffusion-model](https://github.com/GuyTevet/motion-diffusion-model)
+
+### **2. HumanML3D Dataset**
+The primary dataset used for text-to-motion mapping.
+* **Paper:** [Generating Diverse and Natural 3D Human Motions from Textual Descriptions](https://arxiv.org/abs/2207.13244)
+* **Authors:** Guo, Chuan and Zou, Shihao and Zuo, Xinxing and Wang, Sen and Ji, Wei and Li, Xingyuan and Cheng, Li.
+* **Repo:** [EricGuo5513/HumanML3D](https://github.com/EricGuo5513/HumanML3D)
+
+### **3. SMPL Body Model**
+Used for the `rot2xyz` transformation and skeleton visualization.
+* **Paper:** [SMPL: A Skinned Multi-Person Linear Model](https://smpl.is.tue.mpg.de/)
+* **Organization:** Max Planck Institute for Intelligent Systems.
+
+### **4. Text Embeddings (GloVe & CLIP)**
+* **GloVe:** [Stanford NLP](https://nlp.stanford.edu/projects/glove/)
+* **CLIP:** [OpenAI CLIP](https://github.com/openai/CLIP)
+
+---
