@@ -96,6 +96,12 @@ text prompt : "a person walking forward"
 
 ---
 
+## ADE
+![ADE_bar_chart](assets/ade_bar_chart.png)
+![ADE_box_blot](assets/ade_box_plot.png)
+![ADE_line_chart](assets/ade_line_chart.png)
+---
+
 ## Credits & Citations
 
 This project is built upon the incredible work of the 3D motion research community. If you use this code or the pre-trained models, please cite the following:
