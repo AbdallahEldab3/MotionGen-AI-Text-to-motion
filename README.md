@@ -52,10 +52,23 @@ Use these commands in your terminal. We use `TensorboardPlatform` to ensure your
 ```powershell
 python -m train.train_mdm --save_dir save/run_v15 --dataset humanml --batch_size 32 --train_platform_type TensorboardPlatform --overwrite
 ```
+---
 
-### **Evaluation (Calculating ADE/FDE)**
+### **Evaluation**
+
+For practice, I implemented an ADE (Average Displacement Error) based evaluation script to measure how close generated motions are to ground truth joint positions. While ADE is not the standard metric used in the MDM paper (which uses FID, R-Precision, and Diversity via a pretrained T2M motion encoder), it serves as a simple and interpretable sanity check for tracking model improvement across training checkpoints without requiring additional pretrained evaluator models.
+
+Results at step 45k (7.5% of full training, text-conditioned, guidance=2.5):
+- Mean ADE: 1.19 (unconditioned) / 1.51 (text + CFG)
+- Evaluated on 50 HumanML3D test sequences
+
+> Note: ADE penalizes semantically correct but geometrically different motions, so lower ADE does not strictly mean better generation quality. A fully trained MDM on the complete dataset would be evaluated with FID/R-Precision for meaningful comparison against published results.
+
+---
+
+### **Evaluation (Calculating ADE)**
 ```powershell
-python -m eval.eval_humanml --model_path .\save\run_v15\model000020000.pt --dataset humanml
+python evaluate_mdm.py --model_path model\mode0000000000.pt --args_path  model\args.json --device cuda
 ```
 
 ---
@@ -88,7 +101,7 @@ plt.show()
 ---
 
 ## 5. Blender Visualization Code
-To see your model's motion in 3D, open Blender's Scripting tab and paste blender.py content and add path to result npy file.
+*To see your model's motion in 3D, open Blender's Scripting tab and paste blender.py content and add path to result npy file.*
 ---
 ## Demo
 text prompt : "a person walking forward"
